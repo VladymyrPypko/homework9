@@ -1,1 +1,190 @@
 @use "../../presets" as *;
+
+.header {
+    position: relative;
+    width: 96%;
+    margin-inline: auto;
+    background-color: $color-white;
+
+    .menu {
+        margin-top: 2%;
+        background-color: $color-primary;
+        padding: 10px;
+
+
+        &__list {
+            display: none;
+            width: 100%;
+            margin-top: 10px;
+            z-index: 1;
+        }
+        
+        &__link {
+            display: block;
+            padding: 10px;
+            font-size: 14px;
+            color: $color-menu-font;
+            transition: all .5s;
+            
+            &:focus,
+            &:hover {
+                background-color: $color-gray-light;
+                color: $color-white;
+            }
+        }
+        
+        #menu-toggle {
+            display: none;
+        }
+        
+        #menu-toggle:checked ~ .menu__list {
+            display: block;
+        }
+
+        .menu-toggle {
+            position: relative;
+            display: block;
+            height: 25px;
+            width: 30px;
+
+            &::before, &::after, & span {
+                position: absolute;
+                width: 90%;
+                height: 3px;
+                background-color: $color-menu-font;
+                transition: all .4s;
+            }
+
+            &::before {
+                content: "";
+                top: 0;
+            }
+
+            &::after {
+                content: "";
+                bottom: 0;
+            }
+
+            & span {
+                top: 11px;
+            }
+        }
+
+        #menu-toggle:checked ~ .menu-toggle::after {
+            transform: rotate(45deg);
+            bottom: 10px;
+        }
+
+        #menu-toggle:checked ~ .menu-toggle::before {
+            transform: rotate(-45deg);
+            top: 12px;
+        }
+
+        #menu-toggle:checked ~ .menu-toggle span {
+            transform: rotate(-45deg);
+            top: 12px;
+        }
+    }
+
+    &__title {
+        position: absolute;
+        right: 5%;
+        top: 0;
+        padding: 5px;
+        line-height: 30px;
+        vertical-align: middle;
+        font-size: 20px;
+        color: $color-menu-font;
+        
+        .header__logo {
+            aspect-ratio: 1;
+            width: 30px;
+            vertical-align: middle;
+            background-color: $color-menu-font;
+            border-radius: 50px;
+        }
+    }
+
+    .nav {
+        width: 100%;
+        padding: 10px;
+
+        &__list {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            row-gap: 5px;
+            width: 100%;
+
+        }
+
+        &__item {
+            flex-basis: 33%;
+            text-align: center;
+            transition: all .5s;
+        }
+
+        &__link {
+            display: block;
+            padding: 5px;
+            color: $color-black;
+            transition: all .5s;
+        }
+
+        .nav__item:focus-within,
+        .nav__link:hover {
+            background-color: $color-primary;
+        }
+    }
+
+    .hero {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        gap: 25px;
+        background-color: $color-menu-font;
+        background-image: url(../images/hero.png);
+        background-attachment: left;
+        background-repeat: no-repeat;
+        background-size: cover;
+        color: $color-white;
+
+        &__box {
+            margin: 25px;
+        }
+
+        &__title {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        &__info {
+            max-width: 25ch;
+            font-size: 12px;
+            line-height: 18px;
+            font-weight: 300;
+        }
+
+        &__link {
+            display: block;
+            text-align: center;
+            width: 150px;
+            height: 40px;
+            margin-top: 10px;
+            font-size: 14px;
+            line-height: 36px;
+            background-color: $color-secondary;
+            color: $color-white;
+            border: 2px solid $color-white;
+            border-radius: 40px;
+            transition: all .5s;
+
+            &:hover {
+                background-color: $color-white;
+                color: $color-secondary;
+            }
+        }
+    }
+}

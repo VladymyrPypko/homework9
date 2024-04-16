@@ -1,1 +1,26 @@
 @use "../presets" as *;
+
+.callback {
+    display: flex;
+    justify-content: space-around;
+    padding: 15px;
+    background-color: $color-white;
+    align-items: center;
+
+    &__btn {
+        width: 170px;
+        height: 40px;
+        font-size: 14px;
+        background-color: $color-white;
+        color: $color-black;
+        border: 2px solid $color-secondary;
+        border-radius: 40px;
+        transition: all .5s;
+
+        &:focus,
+        &:hover {
+            background-color: $color-secondary;
+            color: $color-white;
+        }
+    }
+}
