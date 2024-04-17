@@ -104,3 +104,82 @@
         }
     }
 }
+
+@media screen and (min-width: 901px) {
+    .main {
+        width: 100%;
+        padding-block: 80px;
+
+        .promo {
+            display: flex;
+            flex-direction: column;
+            row-gap: 25px;
+            width: 58%;
+            padding-inline: 10px;
+            margin-block: 50px;
+    
+            // &__item {
+            //     display: flex;
+            //     align-items: center;
+            //     height: 150px;
+            //     padding: 20px;
+            //     background-color: $color-secondary;
+            // }
+            
+            // &__container {
+            //     flex-basis: 70%;
+            //     color: $color-white;
+            // }
+    
+            // &__title {
+            //     font-size: 18px;
+            //     font-weight: 700;
+            // }
+    
+            // &__info {
+            //     max-width: 17ch;
+            //     margin-block: 15px;
+            //     font-size: 12px;
+            //     font-weight: 300;
+            // }
+    
+            // &__input {
+            //     width: 70%;
+            //     padding: 5px 10px;
+            //     outline: none;
+            //     border: none;
+            //     border-radius: 30px;
+            //     font-size: 14px;
+    
+            //     &::placeholder {
+            //         color: $color-placeholder;
+            //         padding-left: 15px;
+            //     }
+            // }
+    
+            // &__link {
+            //     display: block;
+            //     text-align: center;
+            //     width: 140px;
+            //     height: 30px;
+            //     font-size: 12px;
+            //     line-height: 26px;
+            //     background-color: $color-secondary;
+            //     color: $color-white;
+            //     border: 2px solid $color-white;
+            //     border-radius: 30px;
+            //     transition: all .5s;
+    
+            //     &:focus,
+            //     &:hover {
+            //         background-color: $color-white;
+            //         color: $color-secondary;
+            //     }
+            // }
+    
+            // &__image {
+            //     max-width: 30%;
+            // }
+        }
+    }
+}
