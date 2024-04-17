@@ -189,3 +189,118 @@
         }
     }
 }
+
+@media screen and (min-width: 901px) {
+    .header {
+        width: 100%;
+        margin: 0;
+
+        .menu {
+            margin: 0;
+            padding: 0;
+    
+            &__list {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin: 0;
+            }
+            
+            &__link {
+                display: block;
+                padding: 16.5px 15px;
+                transition: all .5s;
+            }
+            
+            #menu-toggle, .menu-toggle {
+                display: none;
+                opacity: 0;
+            }
+        }
+
+        &__container {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            padding: 20px;
+        }
+
+        &__title {
+            position: relative;
+            inset: 0;
+            padding: 0;
+            line-height: 42px;
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: $color-secondary;
+            
+            .header__logo {
+                aspect-ratio: 1;
+                width: 80px;
+                vertical-align: middle;
+                background-color: transparent;
+                border-radius: 0;
+            }
+        }
+
+        .nav {
+            padding: 0;
+    
+            &__list {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-wrap: nowrap;
+                row-gap: 0;
+                width: 100%;
+            }
+    
+            &__item {
+                flex-basis: auto;
+            }
+    
+            &__link {
+                padding: 30px 20px;
+                font-size: 1rem;
+                line-height: 19px;
+            }
+        }
+
+        .hero {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+            min-height: 604px;
+            background-image: url(../images/hero.png);
+    
+            &__box {
+                width: 308px;
+                margin: 0;
+                margin-left: 21%;
+            }
+    
+            &__title {
+                font-size: 48px;
+                font-weight: 700;
+                line-height: 56px;
+                margin-bottom: 44px;
+                vertical-align: bottom;
+            }
+    
+            &__info {
+                display: flex;
+                flex-direction: column;
+                max-width: 35ch;
+                font-size: 14px;
+                line-height: 20px;
+                font-weight: 400;
+            }
+    
+            &__link {
+                display: block;
+                width: 170px;
+                margin-top: 19px;
+            }
+        }
+    }
+}
