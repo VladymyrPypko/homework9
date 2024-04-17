@@ -515,18 +515,104 @@ hr {
   width: 70%;
 }
 
+@media screen and (min-width: 901px) and (max-width: 1500px) {
+  .main .promo {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: 1fr;
+    row-gap: 0px;
+    width: 58%;
+    padding-inline: 0px;
+    margin-block: 100px;
+  }
+  .main .promo__item--bonuses-gifts {
+    margin-bottom: 25px;
+  }
+}
 @media screen and (min-width: 901px) {
   .main {
     width: 100%;
     padding-block: 80px;
   }
   .main .promo {
-    display: flex;
-    flex-direction: column;
-    row-gap: 25px;
+    flex-direction: row;
+    justify-content: space-between;
+    row-gap: 0;
+    -moz-column-gap: 50px;
+         column-gap: 50px;
     width: 58%;
-    padding-inline: 10px;
-    margin-block: 50px;
+    padding-inline: 0;
+    margin-block: 100px;
+    margin-inline: auto;
+  }
+  .main .promo__item {
+    min-width: 410px;
+    flex-basis: 48%;
+    height: 212px;
+    padding: 40px;
+  }
+  .main .promo__container {
+    flex-basis: auto;
+  }
+  .main .promo__title {
+    line-height: 21px;
+  }
+  .main .promo__info {
+    margin-block: 25px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+  }
+  .main .promo__input {
+    width: 225px;
+    padding: 9.5px 25px;
+    outline: none;
+    border: none;
+    border-radius: 30px;
+    font-size: 14px;
+  }
+  .main .promo__input::-moz-placeholder {
+    padding-left: 0;
+    font-size: 14px;
+    line-height: 16.4px;
+    color: rgb(196, 196, 196);
+  }
+  .main .promo__input::placeholder {
+    padding-left: 0;
+    font-size: 14px;
+    line-height: 16.4px;
+    color: rgb(196, 196, 196);
+  }
+  .main .promo__link {
+    width: 170px;
+    height: 35px;
+    font-size: 14px;
+    line-height: 31px;
+  }
+  .main .promo__image {
+    max-width: 100%;
+    margin-left: auto;
+  }
+  .main .partners {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+    width: 58%;
+    padding-inline: 0px;
+    margin-block: 0px;
+    margin: 0 auto 70px auto;
+  }
+  .main .partners__item {
+    flex-basis: auto;
+  }
+  .main .partners__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px 0px;
+  }
+  .main .partners__logo {
+    width: 149px;
   }
 }
 .footer {
